@@ -1,0 +1,22 @@
+<div *ngIf="tags && tags.length > 0" [style.justifyContent]="justifyContent">
+  <a
+    *ngFor="let tag of tags"
+    href="#"
+    [routerLink]="['/tag/' + tag.name]"
+    routerLinkActive="router-link-active"
+    >{{ tag.name }}({{ tag.count }})</a
+  >
+</div>
+
+<div
+  *ngIf="foodPageTags && foodPageTags.length > 0"
+  [style.justifyContent]="justifyContent"
+>
+  <a
+    *ngFor="let tag of foodPageTags"
+    href="#"
+    [routerLink]="['/tag/' + tag]"
+    routerLinkActive="router-link-active"
+    >{{ tag }}</a
+  >
+</div>
