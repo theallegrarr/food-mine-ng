@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,6 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './search.component.css',
 })
 export class SearchComponent implements OnInit {
+  @Output() name = new EventEmitter<string>();
+
   searchTerm: string = '';
 
   constructor(private route: ActivatedRoute, private router: Router) {}

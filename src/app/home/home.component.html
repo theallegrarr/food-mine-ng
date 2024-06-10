@@ -1,4 +1,4 @@
-<app-search></app-search>
+<app-search (name)="handleName($event)"></app-search>
 <app-tags [justifyContent]="justifyContent"></app-tags>
 <app-not-found
   [visible]="!foods || foods.length == 0"

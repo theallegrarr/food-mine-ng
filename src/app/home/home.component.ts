@@ -28,6 +28,10 @@ export class HomeComponent {
     private route: ActivatedRoute
   ) {}
 
+  handleName(name: string): void {
+    console.log(name);
+  }
+
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       if (params['searchTerm']) {
